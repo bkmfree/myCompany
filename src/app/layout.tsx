@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,13 +46,7 @@ export default function RootLayout({
             </div>
           </header>
           <main className="flex-1">{children}</main>
-          <footer className="border-t py-6 md:py-0">
-            <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-              <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-                © {new Date().getFullYear()} TechCorp. All rights reserved.
-              </p>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>
